@@ -24,9 +24,39 @@ const PAGE = {
 (function(){
 
     if(!window.state){
-        window.state = {
-            page:PAGE.HOME
-        };
+        let target = {};
+
+        window.state = (function(){
+
+            let eventTarget = document.createTextNode(null);
+            let handler = {};
+            let proxy = new Proxy({}, handler);
+
+            // Pass EventTarget interface calls to DOM EventTarget object
+            
+            proxy.addEventListener = function(){
+                eventTarget.addEventListener.bind(eventTarget);
+            };
+
+            proxy.removeEventListener = function(){
+                eventTarget.removeEventListener.bind(eventTarget);
+            };
+
+            handler.get = function(obj, prop){
+                return prop in obj ? obj[prop] : null;
+            };
+
+            handler.set = function(obj, prop, val){
+                obj[prop] = val;
+                let evt = new CustomEvent(prop, {
+                    detail:{value: obj[prop]}
+                    }
+                );
+                eventTarget.dispatchEvent(evt);
+            }
+
+            return proxy;
+        })();
     }
 
 })();
