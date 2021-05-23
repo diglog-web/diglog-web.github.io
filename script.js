@@ -13,10 +13,28 @@ var removeClass = (el, css) => {
     }   
 };
 
+const PAGE = {
+     HOME : 'HOME'
+    ,FEATURE: 'FEATURE'
+    ,HOW_IT_WORKS: 'HOW IT WORKS'
+    ,PRICING: 'PRICING'
+    ,CONTACT_US: 'CONTACT_US'
+};
+
+(function(){
+
+    if(!window.state){
+        window.state = {
+            page:PAGE.HOME
+        };
+    }
+
+})();
+
 // email element
 (function(){
     document.querySelectorAll('div.email').forEach( el => {
-        let placeholder = el.querySelector('.placeholder');
+        let placeholder = el.querySelector('.email-placeholder');
         let input = el.querySelector('input');
         let asterisk = placeholder.querySelector('span');
         let isInputActive = false;
@@ -24,7 +42,8 @@ var removeClass = (el, css) => {
         
         function setToInvalid() {
             setClass(el, 'email-invalid');
-            removeClass(el, 'email-hover');           
+            removeClass(el, 'email-hover');  
+            removeClass(el, 'email-default');         
         }
 
         input.addEventListener('change', evt => {
@@ -33,14 +52,14 @@ var removeClass = (el, css) => {
             }
         });
 
-        input.addEventListener('mouseover', evt => {
+        el.addEventListener('mouseover', evt => {
             if(!isInputActive && isEmailValid()){
                 setClass(el, 'email-hover');
             }
             
         });
 
-        input.addEventListener('mouseout', evt => {
+        el.addEventListener('mouseout', evt => {
             removeClass(el, 'email-hover');
         });
 
@@ -48,7 +67,7 @@ var removeClass = (el, css) => {
             isInputActive = true;
             removeClass(el, 'email-invalid');
             setClass(placeholder, 'placeholder-minimized');
-            setClass(input, 'input-focus');
+            setClass(input, 'email-input-focus');
             removeClass(el, 'email-hover');
             setClass(el, 'email-active');
             removeClass(asterisk, 'red');
@@ -56,18 +75,20 @@ var removeClass = (el, css) => {
 
         input.addEventListener('blur', evt => {
             isInputActive = false;
+            removeClass(el, 'email-active');
 
             if(!isEmailValid()) {
                 setToInvalid();
             } else {
                 setClass(el, 'email-hover');
-                removeClass(el, 'email-active');
                 setClass(asterisk, 'red');
             }
 
+            
+
             if(input.value.trim() === ''){
                 removeClass(placeholder, 'placeholder-minimized');
-                removeClass(input, 'input-focus');
+                removeClass(input, 'email-input-focus');
             }
 
         });
@@ -78,7 +99,13 @@ var removeClass = (el, css) => {
         }
         if(input.value.trim() !== ''){
             setClass(placeholder, 'placeholder-minimized');
-            setClass(input, 'input-focus');
+            setClass(input, 'email-input-focus');
         }
     });
+})();
+
+// subscribe element
+(function(){
+
+
 })();

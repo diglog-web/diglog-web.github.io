@@ -31,12 +31,20 @@
         <button class="secondary-sm-btn">Label</button>
         <button class="secondary-sm-btn" disabled>Label</button>
 
-        <div class="email">
-            <span class="placeholder">
+        <div class="email email-default">
+            <span class="email-placeholder">
                 Email Address
                 <span class="red">*</span>
               </span>
-            <input type="email" name="email" required spellcheck="false">
+            <input type="email" class="email-input" name="email" required spellcheck="false">
+        </div>
+
+        <div class="subscribe email-default">
+            <div class="subscription-email">
+                <span class="email-placeholder">Your email address</span>
+                <input type="email" class="email-input" name="subcription" id="subscriptionEmail" required spellcheck="false">
+            </div>
+            <button class="primary-med-btn">Subscribe</button>
         </div>
 
     </div>
