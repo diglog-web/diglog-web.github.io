@@ -105,11 +105,11 @@
                 <div class="logo-container"></div>
                 <nav>
                     <ul>
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Feature</a></li>
-                        <li><a href="#">How It Works</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li class="active"><a href="javascript:void(0)">Home</a></li>
+                        <li><a href="javascript:void(0);">Feature</a></li>
+                        <li><a href="javascript:void(0);">How It Works</a></li>
+                        <li><a href="javascript:void(0);">Pricing</a></li>
+                        <li><a href="javascript:void(0);">Contact Us</a></li>
                     </ul>
                 </nav>
 
@@ -129,10 +129,29 @@
 
         connectedCallback() {
 
+            this.addEventListeners();
         }
 
         disconnectedCallback() {
 
+        }
+
+        addEventListeners(){
+            const links = this.shadowRoot.querySelectorAll('li a');
+            for(const li of links){
+                li.addEventListener('click', evt => {
+                    window.state.page = evt.target.innerText;
+                });
+            }
+
+            window.state.eventTarget.addEventListener('page', function(evt){
+                removeClass(this.shadowRoot.querySelector('.active'), 'active');
+                
+                const el = Array.from(this.shadowRoot.querySelectorAll('li'))
+                    .find(el => el.children[0].innerText === evt.detail.value);
+
+                setClass(el, 'active');
+            }.bind(this));
         }
 
     });    

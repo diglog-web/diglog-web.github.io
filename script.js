@@ -2,44 +2,30 @@
 
 // extensions
 var setClass = (el, css) => {
-    if(!el.classList.contains(css)){
+    if(el && !el.classList.contains(css)){
         el.classList.add(css);
     }   
 };
 
 var removeClass = (el, css) => {
-    if(el.classList.contains(css)){
+    if(el && el.classList.contains(css)){
         el.classList.remove(css);
     }   
 };
 
-const PAGE = {
-     HOME : 'HOME'
-    ,FEATURE: 'FEATURE'
-    ,HOW_IT_WORKS: 'HOW IT WORKS'
-    ,PRICING: 'PRICING'
-    ,CONTACT_US: 'CONTACT_US'
-};
-
 (function(){
 
+
+    const eventTarget = document.createTextNode(null);
+
     if(!window.state){
-        let target = {};
 
         window.state = (function(){
 
-            let eventTarget = document.createTextNode(null);
-            let handler = {};
-            let proxy = new Proxy({}, handler);
-
-            // Pass EventTarget interface calls to DOM EventTarget object
-            
-            proxy.addEventListener = function(){
-                eventTarget.addEventListener.bind(eventTarget);
-            };
-
-            proxy.removeEventListener = function(){
-                eventTarget.removeEventListener.bind(eventTarget);
+            const handler = {};
+            const target = {
+                page: ''
+                ,eventTarget: eventTarget
             };
 
             handler.get = function(obj, prop){
@@ -53,9 +39,11 @@ const PAGE = {
                     }
                 );
                 eventTarget.dispatchEvent(evt);
+                return true;
             }
 
-            return proxy;
+
+            return new Proxy(target, handler);
         })();
     }
 
