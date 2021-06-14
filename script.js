@@ -122,8 +122,3 @@ var removeClass = (el, css) => {
     });
 })();
 
-// subscribe element
-(function(){
-
-
-})();

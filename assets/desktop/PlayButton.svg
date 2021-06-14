@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="36px" viewBox="0 0 26 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>PlayButton</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-323.000000, -184.000000)" fill="#F09000" fill-rule="nonzero">
+            <path d="M346.905755,198.727215 L327.818091,185.659871 C326.936587,185.055975 326.048407,184.736364 325.310158,184.736364 C323.882895,184.736364 323,185.881846 323,187.799235 L323,216.041579 C323,217.956743 323.881782,219.1 325.305707,219.1 C326.045069,219.1 326.919063,218.780111 327.802514,218.174546 L346.899079,205.10748 C348.127176,204.265753 348.807289,203.133066 348.807289,201.916652 C348.807567,200.701072 348.135243,199.568663 346.905755,198.727215 Z" id="PlayButton"></path>
+        </g>
+    </g>
+</svg>

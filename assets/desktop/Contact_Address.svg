@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Contact_Address</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1608.000000, -546.000000)">
+            <g id="Contact_Address" transform="translate(1608.000000, 546.000000)">
+                <circle id="Oval" stroke="#F09000" stroke-width="2" fill="#FFFFFF" cx="28" cy="28" r="27"></circle>
+                <path d="M28.24,30.8221867 C25.1031467,30.8221867 22.5510933,28.2701867 22.5510933,25.1333333 C22.5510933,21.99648 25.1031467,19.4444267 28.24,19.4444267 C31.3768,19.4444267 33.9288533,21.99648 33.9288533,25.1333333 C33.9288533,28.2701867 31.3768,30.8221867 28.24,30.8221867 M28.24,15 C22.5943467,15 18,19.4048 18,24.8204267 C18,32.51536 27.27744,40.4605333 27.6722133,40.7941867 C27.8349333,40.9317867 28.03744,41 28.24,41 C28.4425067,41 28.6450667,40.9317867 28.8077867,40.7952533 C29.20256,40.4605333 38.48,32.51536 38.48,24.8204267 C38.48,19.4048 33.8856,15 28.24,15" id="Fill-1" fill="#F09000" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

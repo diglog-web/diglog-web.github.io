@@ -46,6 +46,7 @@
                 display: flex;
                 height: var(--header-height);
                 align-items: center;
+                border-bottom: 5px solid #FFFFFF;
             }
             
             
@@ -53,7 +54,7 @@
                 text-decoration: none;
                 color: #686868;
             }
-            
+
             .active {
                 border-bottom: 5px solid #F09000;
             }
