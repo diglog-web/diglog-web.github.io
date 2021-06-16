@@ -8,7 +8,7 @@
             :host {
                 display: block;
                 --logo-container-width: 166px;
-                --request-demo-width: 155px;
+                --request-demo-width: 200px;
                 --nav-width: calc(100% - var(--logo-container-width) - var(--request-demo-width));
                 --header-height: 84px;
             }
@@ -31,6 +31,7 @@
             nav{
                 width: var(--nav-width);
                 height: 100%;
+                margin: 0 10%;
             }
 
             ul {
@@ -38,7 +39,8 @@
                 justify-content: space-around;
                 list-style-type: none;
                 flex-direction: row;
-                font-family: "Roboto Bold";
+                font-family: "Roboto";
+                font-weight: bold;
                 font-size: 13px;
             }
 
@@ -74,7 +76,7 @@
             button {
                 color: #FFFFFF;
                 font-family: Roboto;
-                font-size: 14px;
+                font-size: 13px;
                 font-weight: bold;
 
                 width: var(--request-demo-width);
@@ -103,7 +105,11 @@
 
         <header>
             <div class="header-content">
-                <div class="logo-container"></div>
+                <div class="logo-container">
+                    <img src="assets/desktop/DigLog Logo - WhiteBG.png" 
+                        alt="DigLog"
+                        width="167">
+                </div>
                 <nav>
                     <ul>
                         <li class="active"><a href="javascript:void(0)">Home</a></li>

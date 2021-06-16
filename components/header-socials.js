@@ -7,18 +7,18 @@
         @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
         :host {
-            display: block;
+            display: block; 
         }
-        .socials-section{
+        .socials-container{
             background-color: #001130;
-            height: 30px;
             width: 100%;
+            height: 30px;
             color: #e5e7ea;
             display: flex;
             justify-content: center;
         }
         
-        .socials-container{
+        .socials-content{
             width: var(--main-width);
             display: flex;
             justify-content: space-between;
@@ -26,7 +26,7 @@
             align-items: center;
         }
         
-        .socials-container email {
+        .socials-content email {
             color: white;
         }
         
@@ -51,8 +51,8 @@
         }   
     </style>
 
-    <section class="socials-section">
-        <div class="socials-container">
+    <section class="socials-container">
+        <div class="socials-content">
             <div class="email">
                 <i class="fa fa-envelope-o"></i>
                 <span>info@diglog.com</span>

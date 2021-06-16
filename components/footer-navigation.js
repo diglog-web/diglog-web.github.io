@@ -15,15 +15,24 @@
                 display: flex;
                 justify-content: center;
             }
-            
+
+            .footer-info-content {
+                width: var(--main-width);
+                margin-top: 133px;
+            }    
+
             .footer-info {
                 display: flex;
                 width: 100%;
+                flex-wrap: wrap;
             }
-            
-            .footer-info-container {
-                width: var(--main-width);
-                margin-top: 133px;
+
+            .footer-info > div {
+                flex: 1 1 150px;
+            }
+
+            .footer-info > div:nth-child(2) {
+                margin: 30px;
             }
             
             .copyright-container{
@@ -38,32 +47,95 @@
                 margin-top: 60px;
             }
             
-            .company-info-container {
-                display: flex;
+            .company-info-container{
+                /* overide flex-centered-column */
+                align-items: flex-start;
+            }
+
+            .company-info-container div:nth-child(2) {
+                margin-top: 20px;
+                color: rgba(0,0,0,0.5);
+                font-size: 13px;
             }
             
-            .footer-links-container {
-                display: flex;
+            .footer-links-container > div {
+                flex-basis: 50%;
             }
-            
-            .app-links-container {
-                display: flex;
+
+            .footer-links-container h1{
+                font-family: Raleway;
+                font-size: 13px;
+                color: #001130;
+            }
+
+            .footer-links-container ul{
+                font-size: 13px;
+                color: rgba(0,0,0,0.6);
+                list-style-type: none;
+                margin-top: 10px;
+            }
+
+            .footer-links-container ul li{
+                margin-top: 10px;
+            }
+
+            .app-links-container img:nth-child(2) {
+                margin-left: 20px;
             }
             
         </style>
 
         <footer>
-            <div class="footer-info-container">
+            <div class="footer-info-content">
                 
-                <div class="footer-info">
-                    <div class="company-info-container">
+                <div class="footer-info flex-centered">
 
-                    </div>
-                    <div class="footer-links-container">
+                    <div class="company-info-container flex-centered-column">
 
-                    </div>
-                    <div class="app-links-container">
+                        <div>
+                            <img src="assets/desktop/DigLog Logo - WhiteBG.png" 
+                                alt="DigLog"
+                                width="158">
+                        </div>
                         
+                        <div>
+                            DigLog is a digitized business management solution platform 
+                            that streamlines day-to-day business operations.
+                        </div>
+
+                    </div>
+
+                    <div class="footer-links-container flex-centered">
+                        <div>
+                            <h1>Product</h1>
+                            <ul>
+                                <li>Features</li>
+                                <li>Pricing</li>
+                                <li>How It Works</li>
+                            </ul>                       
+                        </div>
+
+                        <div>
+                            <h1>Company</h1>
+                            <ul>
+                                <li>About Us</li>
+                                <li>Terms & Conditions</li>
+                                <li>Privacy Policy</li>
+                            </ul>                       
+                        </div>
+
+                    </div>
+
+                    <div class="app-links-container flex-centered">
+                    
+                        <img src="assets/desktop/DL_AppStore.png" 
+                            width="154"
+                            alt="Download on the AppStore">
+
+                        <img src="assets/desktop/DL_GooglePlay.png" 
+                            width="173"
+                            alt="Get it on Google Play">
+                                        
                     </div>
                 </div>
 

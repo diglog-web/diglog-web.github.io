@@ -1,0 +1,4 @@
+desktop
+page width: 1440
+page margin: 165
+margin: 12%
