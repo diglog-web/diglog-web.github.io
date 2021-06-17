@@ -3,7 +3,7 @@
     const template = document.createElement('template');
     template.innerHTML = `
         <style>
-             @import "./style.css";
+             @import "./common.css";
 
             :host {
                 display: block;
@@ -93,7 +93,7 @@
                     <div class="company-info-container flex-centered-column">
 
                         <div>
-                            <img src="assets/desktop/DigLog Logo - WhiteBG.png" 
+                            <img src="assets/DigLog Logo - WhiteBG.png" 
                                 alt="DigLog"
                                 width="158">
                         </div>
@@ -126,17 +126,7 @@
 
                     </div>
 
-                    <div class="app-links-container flex-centered">
-                    
-                        <img src="assets/desktop/DL_AppStore.png" 
-                            width="154"
-                            alt="Download on the AppStore">
-
-                        <img src="assets/desktop/DL_GooglePlay.png" 
-                            width="173"
-                            alt="Get it on Google Play">
-                                        
-                    </div>
+                    <app-links></app-links>
                 </div>
 
                 <div class="copyright-container">

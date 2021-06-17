@@ -23,6 +23,13 @@
 }
 
 @font-face {
+    font-family: "Roboto Medium";
+    src: url("./fonts/Roboto/Roboto-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "Raleway";
     src: url("./fonts/Raleway/Raleway-VariableFont_wght.ttf");
     font-style: normal;
@@ -33,16 +40,7 @@ html{
     font-size: 13px;
 }
 
-
-.flex-centered{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-centered-column{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+header {
+    position: relative;
+    z-index: 1;
 }

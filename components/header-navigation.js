@@ -14,10 +14,9 @@
             }
 
             header {
-                height: var(--header-height);
-                box-shadow: 0 3px 7px 0 rgba(0,0,0,0.15);    
                 display: flex;
-                justify-content: center;            
+                justify-content: center;   
+                box-shadow: 0 3px 7px 0 rgba(0,0,0,0.15);         
             }
 
             .header-content{
@@ -42,6 +41,7 @@
                 font-family: "Roboto";
                 font-weight: bold;
                 font-size: 13px;
+                min-width: 300px;
             }
 
             ul li {
@@ -106,7 +106,7 @@
         <header>
             <div class="header-content">
                 <div class="logo-container">
-                    <img src="assets/desktop/DigLog Logo - WhiteBG.png" 
+                    <img src="assets/DigLog Logo - WhiteBG.png" 
                         alt="DigLog"
                         width="167">
                 </div>

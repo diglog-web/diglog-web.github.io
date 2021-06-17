@@ -4,7 +4,6 @@
     template.innerHTML = `
 
     <style>
-        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
         :host {
             display: block; 
@@ -41,27 +40,27 @@
         .social-networks a {
             width: 20px;
             height: 20px;
-            border: 1.5px solid #FFFFFF;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 50%;
             margin: 3px;
             font-size: 9px;
-        }   
+        }  
+        
     </style>
 
     <section class="socials-container">
         <div class="socials-content">
             <div class="email">
-                <i class="fa fa-envelope-o"></i>
+                <img src="./assets/Email.svg">
                 <span>info@diglog.com</span>
             </div>
             <div class="social-networks">
-                <a href="#"><i class="fa fa-facebook-f"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                <a href="#"><img src="./assets/Social_FB.svg"></a>
+                <a href="#"><img src="./assets/Social_Twitter.svg"></a>
+                <a href="#"><img src="./assets/Social_Insta.svg"></a>
+                <a href="#"><img src="./assets/Social_Youtube.svg"></a>
             </div>
         </div>
     </section>
